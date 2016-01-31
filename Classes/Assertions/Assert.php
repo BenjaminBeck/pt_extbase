@@ -640,7 +640,7 @@ class Tx_PtExtbase_Assertions_Assert
         if (is_null($dbObj)) {
             $dbObj = $GLOBALS['TYPO3_DB'];
         }
-        self::isInstanceOf($dbObj, 't3lib_DB', $info);
+        self::isInstanceOf($dbObj, '\TYPO3\CMS\Core\Database\DatabaseConnection', $info);
         
         // append sql_error to info array
         $info['sql_error'] = $dbObj->sql_error();
